@@ -1,0 +1,5 @@
+require("config.remap")
+require("config.telescope")
+require("config.lsp")
+require("config.cmp")
+require("config.treesitter")

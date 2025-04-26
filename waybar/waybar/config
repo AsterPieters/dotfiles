@@ -1,0 +1,27 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["pulseaudio", "clock", "tray"],
+    "hyprland/workspaces": {
+     "format": "{icon}",
+     "on-scroll-up": "hyprctl dispatch workspace e+1",
+     "on-scroll-down": "hyprctl dispatch workspace e-1"
+	},
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+}
